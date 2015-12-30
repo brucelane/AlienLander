@@ -39,8 +39,8 @@ public:
     void update();
     void draw();
 
-    uint mPoints = 50;
-    uint mLines = 50;
+	unsigned int mPoints = 50;
+	unsigned int mLines = 50;
     bool mShowHud = true;
     bool mShowCompass = false;
 
@@ -119,8 +119,8 @@ void AlienLanderApp::buildMeshes()
     vector<vec3> lineCoords;
     vector<vec3> maskCoords;
 
-    for( uint z = 0; z < mLines; ++z ) {
-        for( uint x = 0; x < mPoints; ++x ) {
+	for (unsigned int z = 0; z < mLines; ++z) {
+		for (unsigned int x = 0; x < mPoints; ++x) {
             vec3 vert = vec3( x / (float) mPoints, 1, z / (float) mLines );
 
             lineCoords.push_back( vert );
@@ -150,9 +150,9 @@ void AlienLanderApp::buildMeshes()
 
 void AlienLanderApp::resize()
 {
-    uint height = getWindowHeight();
-    uint width = getWindowWidth();
-    uint margin = 20;
+	unsigned int height = getWindowHeight();
+	unsigned int width = getWindowWidth();
+	unsigned int margin = 20;
     mPoints = (width - (2 * margin)) / 10.0;
     mLines = (height - (2 * margin)) / 25.0;
     buildMeshes();
@@ -215,8 +215,8 @@ void AlienLanderApp::draw()
         // Center the model
         gl::translate(-0.5, 0.0, -0.5);
 
-        uint indiciesInLine = mPoints;
-        uint indiciesInMask = mPoints * 2;
+		unsigned int indiciesInLine = mPoints;
+		unsigned int indiciesInMask = mPoints * 2;
         // Draw front to back to take advantage of the depth buffer.
         for (int i = mLines - 1; i >= 0; --i) {
             gl::color( mBlack );

@@ -9,6 +9,7 @@
 #ifndef __AlienLander__Ship__
 #define __AlienLander__Ship__
 
+#include "cinder/gl/gl.h"
 #include "cinder/app/KeyEvent.h"
 
 using namespace ci;

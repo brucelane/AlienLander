@@ -9,14 +9,17 @@
 #ifndef __Segments__SegmentDisplay__
 #define __Segments__SegmentDisplay__
 
+#include "cinder/app/App.h"
+#include "cinder/gl/gl.h"
 #include "cinder/gl/Vbo.h"
 
 using namespace ci;
+using namespace ci::app;
 using namespace std;
 
 class SegmentDisplay {
 public:
-    SegmentDisplay( uint digits );
+	SegmentDisplay(unsigned int digits);
 
     // Chain-able configuration methods
     SegmentDisplay& position( const vec2 &p );
@@ -38,7 +41,7 @@ public:
     uint16_t valueOf( const char );
 
 protected:
-    uint            mDigits; // Number of characters in display
+	unsigned int    mDigits; // Number of characters in display
     ci::vec2        mPosition;
     float           mScale;
     float           mSlant; // Positive leans right, negative leans left

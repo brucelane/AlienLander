@@ -1,0 +1,13 @@
+#include "../include/Resources.h"
+
+1	ICON	"..\\resources\\cinder_app_icon.ico"
+128	IMAGE	"..\\resources\\usa.png"
+129	IMAGE	"..\\resources\\usa-full.png"
+130	IMAGE	"..\\resources\\moon.png"
+131	IMAGE	"..\\resources\\moon-big.png"
+132	IMAGE	"..\\resources\\usa-square.png"
+133	GLSL	"..\\resources\\vert.glsl"
+134	GLSL	"..\\resources\\frag.glsl"
+135	GLSL	"..\\resources\\segment.vert"
+136	GLSL	"..\\resources\\segment.frag"
+
